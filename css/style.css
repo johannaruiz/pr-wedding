@@ -217,3 +217,53 @@ th {
   display: none;
   visibility: hidden;
   text-indent: -9999px; }
+
+.carousel {
+  position: relative; }
+  .carousel .rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    max-height: 876px; }
+    .carousel .rslides li {
+      -webkit-backface-visibility: hidden;
+      position: absolute;
+      display: none;
+      width: 100%;
+      left: 0;
+      top: 0; }
+      .carousel .rslides li:first-child {
+        position: relative;
+        display: block;
+        float: left; }
+    .carousel .rslides img {
+      display: block;
+      height: auto;
+      float: left;
+      width: 100%;
+      border: 0; }
+  .carousel .centered-btns_nav {
+    z-index: 3;
+    position: absolute;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    top: 50%;
+    left: 0;
+    opacity: 0.5;
+    text-indent: -9999px;
+    overflow: hidden;
+    text-decoration: none;
+    height: 61px;
+    width: 38px;
+    background: transparent url("../img/theme.gif") no-repeat left top;
+    margin-top: -45px; }
+    .carousel .centered-btns_nav:active {
+      opacity: 1.0; }
+    .carousel .centered-btns_nav.next {
+      left: auto;
+      background-position: right top;
+      right: 0; }
+    .carousel .centered-btns_nav:focus {
+      outline: none; }

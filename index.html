@@ -41,7 +41,7 @@
     
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/modernizr.js"></script>
   </head>
   <body>
   <!-- Add your site or application content here -->
@@ -52,21 +52,115 @@
   </header>
   <main role="main" class="wedding">
     <section class="carousel">
-    	
+    	<ul class="rslides">
+    	  <li><img src="img/1.jpg" alt=""></li>
+    	  <li><img src="img/2.jpg" alt=""></li>
+    	  <li><img src="img/3.jpg" alt=""></li>
+    	</ul>
     </section><!--end carousel-->
     <section class="bios">
-    	
+    	<div>
+    	 
+    	</div>
+    	<div>
+    	 
+    	</div>
     </section><!--end bios-->
     <section class="event">
     	
     </section><!--end info-->
     <section class="rsvp">
-    	
+    	<form action="" method="post">
+    	  <label for="fname"></label>
+    	  <input type="text" name="fname" placeholder="First Name">
+    	  <label for="lname"></label>
+    	  <input type="text" name="lname" placeholder="Last Name">
+    	  <label for="address"></label>
+    	  <input type="text" name="address" placeholder="Address">
+    	  <label for="city"></label>
+    	  <input type="text" name="city" placeholder="City">
+    	  <label for="state"></label>
+    	  <select>
+    	    <option>State</option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+    	  </select>
+    	  <label for="zipcode"></label>
+    	  <input type="text" name="zipcode" placeholder="Zipcode">
+    	  <label for="email"></label>
+    	  <input type="email" name="email" placeholder="Email">
+    	  <label for="guests"></label>
+    	  <select>
+    	    <option>Number of Guests</option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+          <option></option>
+    	  </select>
+    	  <label for="request"></label>
+    	  <input type="text" name="requests" placeholder="Special Requests">
+    	  <label for="submit"></label>
+    	  <input type="submit" name="submit">
+    	</form>
     </section><!--end rsvp-->
     <section class="directions">
     	
     </section><!--end directions-->
-    <section class="">
+    <section class="misc-info">
     	
     </section><!-- -->
     <section class="">
@@ -78,12 +172,18 @@
   	  <span class="" itemscope></span>
     </small>
   </footer>
-  
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
   <!--<script src="js/plugins.js"></script>-->
   <script src="js/responsiveslides.js"></script>
-   
+   <script>
+     $(function() {
+       $(".rslides").responsiveSlides({
+         nav: true,
+         namespace: "centered-btns"
+       });
+     });
+   </script>
    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

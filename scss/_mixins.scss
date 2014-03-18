@@ -13,6 +13,11 @@
 	-webkit-box-shadow:$var;
 	box-shadow:$var;
 }
+@mixin border-radius($var){
+	-moz-border-radius:$var;
+	-webkit-border-radius:$var;
+	border-radius:$var;
+}
 @mixin text-shadow($var){
 	-moz-text-shadow:$var;
 	-webkit-text-shadow:$var;
