@@ -1,11 +1,9 @@
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
-  /* 1 */
+  -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */ }
+  -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0; }
@@ -218,6 +216,19 @@ th {
   visibility: hidden;
   text-indent: -9999px; }
 
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  *zoom: 1; }
+
 .carousel {
   position: relative; }
   .carousel .rslides {
@@ -268,10 +279,14 @@ th {
     .carousel .centered-btns_nav:focus {
       outline: none; }
 
-form {
+.rsvp p {
   width: 100%;
   max-width: 485px; }
-  form input {
+.rsvp form {
+  width: 100%;
+  max-width: 485px;
+  margin: 2% 0; }
+  .rsvp form input {
     padding: 3px 5px;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -280,31 +295,46 @@ form {
     font-style: italic;
     margin: 0;
     display: block;
-    float: left; }
-    form input.double {
-      width: 234px; }
-  form input[type="submit"] {
+    float: left;
+    margin: 0 0 2.05% 0;
+    font-weight: 400;
+    font-style: normal; }
+    .rsvp form input.third {
+      width: 31.95%; }
+    .rsvp form input.double {
+      width: 48.95%; }
+    .rsvp form input.single {
+      width: 100%; }
+    .rsvp form input.fname, .rsvp form input.city, .rsvp form input.state, .rsvp form input.email, .rsvp form input.guests {
+      margin: 0 2.05% 0 0; }
+  .rsvp form input[type="submit"] {
     width: 100%;
     color: #0e142e;
     font-weight: 700;
     background: none;
     font-style: normal;
+    margin: 0;
     -moz-transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out; }
-    form input[type="submit"]:hover {
+    .rsvp form input[type="submit"]:hover {
       background: #0e142e;
       color: white;
       border: 1px solid #0e142e; }
 
 ::-webkit-input-placeholder {
-  color: #0e142e; }
+  color: #0e142e;
+  font-style: italic;
+  font-weight: 100; }
 
 ::-moz-placeholder {
-  color: #0e142e; }
+  color: #0e142e;
+  font-style: italic; }
 
 :-ms-input-placeholder {
-  color: #0e142e; }
+  color: #0e142e;
+  font-style: italic; }
 
 input:-moz-placeholder {
-  color: #0e142e; }
+  color: #0e142e;
+  font-style: italic; }
