@@ -1,0 +1,34 @@
+form{
+	width:100%;
+	max-width:485px;
+	input{
+		padding:3px 5px;
+		-webkit-appearance:none;
+		-moz-appearance:none;
+		appearance:none;
+		border:1px solid $pink;
+		font-style:italic;
+		margin:0;
+		display:block;
+		float:left;
+		&.double{
+			width:234px;
+		}
+		&.single{
+			
+		}
+	}
+	input[type="submit"]{
+		width:100%;
+		color:$navy;
+		font-weight:700;
+		background:none;
+		font-style:normal;
+		@include prefixed-transition(all 0.5s ease-in-out);
+		&:hover{
+			background:$navy;
+			color:white;
+			border:1px solid $navy;
+		}
+	}
+}

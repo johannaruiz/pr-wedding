@@ -251,7 +251,7 @@ th {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     top: 50%;
     left: 0;
-    opacity: 0.5;
+    opacity: 0.4;
     text-indent: -9999px;
     overflow: hidden;
     text-decoration: none;
@@ -267,3 +267,44 @@ th {
       right: 0; }
     .carousel .centered-btns_nav:focus {
       outline: none; }
+
+form {
+  width: 100%;
+  max-width: 485px; }
+  form input {
+    padding: 3px 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #ff0099;
+    font-style: italic;
+    margin: 0;
+    display: block;
+    float: left; }
+    form input.double {
+      width: 234px; }
+  form input[type="submit"] {
+    width: 100%;
+    color: #0e142e;
+    font-weight: 700;
+    background: none;
+    font-style: normal;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+    form input[type="submit"]:hover {
+      background: #0e142e;
+      color: white;
+      border: 1px solid #0e142e; }
+
+::-webkit-input-placeholder {
+  color: #0e142e; }
+
+::-moz-placeholder {
+  color: #0e142e; }
+
+:-ms-input-placeholder {
+  color: #0e142e; }
+
+input:-moz-placeholder {
+  color: #0e142e; }
