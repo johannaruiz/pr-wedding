@@ -1,0 +1,50 @@
+@include placeholder;
+html{
+	font-family:"proxima-nova", "Helvetica Neue", "Helvetica", Arial, serif;
+	color:$navy;
+	background:
+	linear-gradient(135deg, $lightest-pink 25%, transparent 25%) -50px 0,
+	linear-gradient(225deg, $lightest-pink 25%, transparent 25%) -50px 0,
+	linear-gradient(315deg, $lightest-pink 25%, transparent 25%),
+	linear-gradient(45deg, $lightest-pink 25%, transparent 25%);	
+	background-size: 100px 100px;
+	background-color: $light-navy;
+}
+main{
+	background:#ffffff;
+	width:100%;
+	max-width:1140px;
+	margin:0 auto;
+	@include box-shadow(0 0 10px 0 rgba(0, 0, 0, 0.5));
+}
+.bios, .event, .rsvp, .directions, .registry, .other-info{
+	padding:0 2%;
+	height:auto;
+	h2{
+		margin:.5em 0;
+		font-size:3em;
+		position: relative;
+		width: 105.2%;
+		font-weight: bold;
+		padding: 7px 20px 7px 25px;
+		margin:0.5em 0 0.5em -0.70em;
+		color:$navy;
+		background-color:$light-pink;
+		@include text-shadow(0px 1px 2px $navy);
+		@include box-shadow(0px 2px 4px $lightest-pink);
+		&:before, &:after{
+			content:' ';
+			position:absolute;
+			width:0;
+			height:0;
+		}
+		&:after{
+			left:0px;
+			top:100%;
+			border-width:5px 5px;
+			border-style:solid;
+			border-color:$dark-pink $dark-pink transparent transparent;
+		}
+	}
+
+}

@@ -1,0 +1,45 @@
+header{
+	width:100%;
+	position:fixed;
+	//top:2%;
+	z-index:3;
+	height:75px;
+	nav{
+		height:inherit;
+		padding:1.5% 0 3%;
+		background:rgba(255, 255, 255, 0.75);
+		ul{
+			text-align:center;
+			display:block;
+			height:auto;
+			li{
+				display:inline-block;
+				margin:0 1%;
+				&:first-child{
+					margin:0 1% 0 0;
+				}
+				&:last-child{
+					margin:0 0 0 1%;
+				}
+				a{
+					display:block;
+					i{
+						position:relative;
+						top:-3px;
+						vertical-align:middle;
+					}
+					span{
+						margin:0 0 0 8px;
+					}
+					color:$pink;
+					text-decoration:none;
+					@include prefixed-transition(color 0.5s ease-in-out);
+					&:hover{
+						color:$navy;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width:320px) and (max-width:480px){}

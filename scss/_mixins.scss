@@ -39,7 +39,7 @@
 	::-webkit-input-placeholder { @content; }
 }
 @mixin placeholder {
-	::-webkit-input-placeholder { color:$navy; font-style:italic; font-weight:100; }
+	::-webkit-input-placeholder { color:$navy; font-style:italic; font-weight:400; }
 	::-moz-placeholder { color:$navy; font-style:italic; }
 	:-ms-input-placeholder { color:$navy; font-style:italic; }
 	input:-moz-placeholder { color:$navy; font-style:italic; }

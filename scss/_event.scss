@@ -1,0 +1,10 @@
+.event{
+	p{
+		width:50%;
+	}
+	@media screen and (min-width:320px) and (max-width:480px){
+		p{
+			width:100%;
+		}
+	}
+}

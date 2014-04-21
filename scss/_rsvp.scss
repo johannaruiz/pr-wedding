@@ -2,11 +2,13 @@
 	p{
 		width:100%;
 		max-width:485px;
+		float:left;
+		margin:0 5% 0 0;
 	}
 	form{
 		width:100%;
 		max-width:485px;
-		margin:2% 0;
+		float:left;
 		input{
 			padding:3px 5px;
 			-webkit-appearance:none;

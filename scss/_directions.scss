@@ -1,0 +1,109 @@
+.directions{
+	h3{
+		font-size:2em;
+		margin:0 0 0.5em 0;
+	}
+	.map-info{
+		margin:0 0 3% 0;
+		.directions-info{
+			width:45%;
+			float:left;
+			margin:0 2% 0 0;
+			p{
+				margin:0 0 1em 0;
+			}
+			a{
+				text-decoration:none;
+				color:$pink;
+				@include prefixed-transition(color 0.5s ease-in-out);
+				&:hover{
+					color:$navy;
+				}
+			}		
+		}
+		#map{
+			width:50%;
+			height:40vh;
+			float:left;
+			.info-window{
+				h1{
+					margin:0;
+				}
+				p{
+					font-weight:normal;
+					margin:0.25em 0 0.5em 0;
+				}
+				a{
+					color:$navy;
+					text-decoration:none;
+					font-weight:bold;
+					@include prefixed-transition(color 0.5s ease-in-out);
+					&:hover{
+						color:$pink;
+					}
+				}
+			}
+		}
+	}
+	.parking{
+		margin:0 0 3% 0;
+		.parking-info{
+			float:left;
+			width:45%;
+			margin:0 2% 0 0;
+		}
+		.zoom{
+			float:left;
+			display:block;
+			width:50%;
+			.parking-image{
+				display:block;
+				width:100%;
+			}	
+		}	
+	}
+	.hotel{
+		margin:0 0 3% 0;
+		.hotel-info{
+			float:left;
+			width:45%;
+			margin:0 2% 0 0;
+		}
+		.hotel-map{
+			float:left;
+			width:50%;
+			height:40vh;
+			iframe{
+				width:100%;
+				height:inherit;
+			}
+		}
+	}
+}
+@media screen and (min-width:320px) and (max-width:480px){
+	.directions{
+		.map-info{
+			.directions-info, #map{
+				float:none;
+				width:100%;
+			}
+		}
+		.parking{
+			.parking-info, .zoom{
+				float:none;
+				width:100%;
+			}
+			.zoom{
+				.parking-image{
+					width:100%;
+				}
+			}
+		}
+		.hotel{
+			.hotel-info, .hotel-map{
+				float:none;
+				width:100%;
+			} 
+		}
+	}
+}

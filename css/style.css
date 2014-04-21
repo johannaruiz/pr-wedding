@@ -211,6 +211,10 @@ th {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-style: normal;
+  font-weight: normal; }
+
 .hidden {
   display: none;
   visibility: hidden;
@@ -228,6 +232,115 @@ th {
 
 .clearfix {
   *zoom: 1; }
+
+.block {
+  display: block; }
+
+.i-block {
+  display: inline-block; }
+
+.bold {
+  font-weight: 700; }
+
+::-webkit-input-placeholder {
+  color: #0e142e;
+  font-style: italic;
+  font-weight: 400; }
+
+::-moz-placeholder {
+  color: #0e142e;
+  font-style: italic; }
+
+:-ms-input-placeholder {
+  color: #0e142e;
+  font-style: italic; }
+
+input:-moz-placeholder {
+  color: #0e142e;
+  font-style: italic; }
+
+html {
+  font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Arial, serif;
+  color: #0e142e;
+  background: linear-gradient(135deg, #ff73c8 25%, transparent 25%) -50px 0, linear-gradient(225deg, #ff73c8 25%, transparent 25%) -50px 0, linear-gradient(315deg, #ff73c8 25%, transparent 25%), linear-gradient(45deg, #ff73c8 25%, transparent 25%);
+  background-size: 100px 100px;
+  background-color: #485797; }
+
+main {
+  background: #ffffff;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); }
+
+.bios, .event, .rsvp, .directions, .registry, .other-info {
+  padding: 0 2%;
+  height: auto; }
+  .bios h2, .event h2, .rsvp h2, .directions h2, .registry h2, .other-info h2 {
+    margin: .5em 0;
+    font-size: 3em;
+    position: relative;
+    width: 105.2%;
+    font-weight: bold;
+    padding: 7px 20px 7px 25px;
+    margin: 0.5em 0 0.5em -0.70em;
+    color: #0e142e;
+    background-color: #ff40b4;
+    -moz-text-shadow: 0px 1px 2px #0e142e;
+    -webkit-text-shadow: 0px 1px 2px #0e142e;
+    text-shadow: 0px 1px 2px #0e142e;
+    -moz-box-shadow: 0px 2px 4px #ff73c8;
+    -webkit-box-shadow: 0px 2px 4px #ff73c8;
+    box-shadow: 0px 2px 4px #ff73c8; }
+    .bios h2:before, .bios h2:after, .event h2:before, .event h2:after, .rsvp h2:before, .rsvp h2:after, .directions h2:before, .directions h2:after, .registry h2:before, .registry h2:after, .other-info h2:before, .other-info h2:after {
+      content: ' ';
+      position: absolute;
+      width: 0;
+      height: 0; }
+    .bios h2:after, .event h2:after, .rsvp h2:after, .directions h2:after, .registry h2:after, .other-info h2:after {
+      left: 0px;
+      top: 100%;
+      border-width: 5px 5px;
+      border-style: solid;
+      border-color: #a60065 #a60065 transparent transparent; }
+
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  height: 75px; }
+  header nav {
+    height: inherit;
+    padding: 1.5% 0 3%;
+    background: rgba(255, 255, 255, 0.75); }
+    header nav ul {
+      text-align: center;
+      display: block;
+      height: auto; }
+      header nav ul li {
+        display: inline-block;
+        margin: 0 1%; }
+        header nav ul li:first-child {
+          margin: 0 1% 0 0; }
+        header nav ul li:last-child {
+          margin: 0 0 0 1%; }
+        header nav ul li a {
+          display: block;
+          color: #ff0099;
+          text-decoration: none;
+          -moz-transition: color 0.5s ease-in-out;
+          -webkit-transition: color 0.5s ease-in-out;
+          transition: color 0.5s ease-in-out; }
+          header nav ul li a i {
+            position: relative;
+            top: -3px;
+            vertical-align: middle; }
+          header nav ul li a span {
+            margin: 0 0 0 8px; }
+          header nav ul li a:hover {
+            color: #0e142e; }
 
 .carousel {
   position: relative; }
@@ -279,13 +392,43 @@ th {
     .carousel .centered-btns_nav:focus {
       outline: none; }
 
+.bios .info {
+  width: 45%; }
+  .bios .info img {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 3px solid #ff0099;
+    width: 100%; }
+  .bios .info h3 {
+    font-size: 1.5em; }
+  .bios .info.erin {
+    float: left; }
+  .bios .info.johanna {
+    float: right; }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .bios .info {
+    width: 100%; }
+    .bios .info.erin, .bios .info.johanna {
+      float: none; }
+    .bios .info.erin {
+      margin: 5% 0 10%; } }
+
+.event p {
+  width: 50%; }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .event p {
+    width: 100%; } }
+
 .rsvp p {
   width: 100%;
-  max-width: 485px; }
+  max-width: 485px;
+  float: left;
+  margin: 0 5% 0 0; }
 .rsvp form {
   width: 100%;
   max-width: 485px;
-  margin: 2% 0; }
+  float: left; }
   .rsvp form input {
     padding: 3px 5px;
     -webkit-appearance: none;
@@ -322,19 +465,110 @@ th {
       color: white;
       border: 1px solid #0e142e; }
 
-::-webkit-input-placeholder {
-  color: #0e142e;
-  font-style: italic;
-  font-weight: 100; }
+.directions h3 {
+  font-size: 2em;
+  margin: 0 0 0.5em 0; }
+.directions .map-info {
+  margin: 0 0 3% 0; }
+  .directions .map-info .directions-info {
+    width: 45%;
+    float: left;
+    margin: 0 2% 0 0; }
+    .directions .map-info .directions-info p {
+      margin: 0 0 1em 0; }
+    .directions .map-info .directions-info a {
+      text-decoration: none;
+      color: #ff0099;
+      -moz-transition: color 0.5s ease-in-out;
+      -webkit-transition: color 0.5s ease-in-out;
+      transition: color 0.5s ease-in-out; }
+      .directions .map-info .directions-info a:hover {
+        color: #0e142e; }
+  .directions .map-info #map {
+    width: 50%;
+    height: 40vh;
+    float: left; }
+    .directions .map-info #map .info-window h1 {
+      margin: 0; }
+    .directions .map-info #map .info-window p {
+      font-weight: normal;
+      margin: 0.25em 0 0.5em 0; }
+    .directions .map-info #map .info-window a {
+      color: #0e142e;
+      text-decoration: none;
+      font-weight: bold;
+      -moz-transition: color 0.5s ease-in-out;
+      -webkit-transition: color 0.5s ease-in-out;
+      transition: color 0.5s ease-in-out; }
+      .directions .map-info #map .info-window a:hover {
+        color: #ff0099; }
+.directions .parking {
+  margin: 0 0 3% 0; }
+  .directions .parking .parking-info {
+    float: left;
+    width: 45%;
+    margin: 0 2% 0 0; }
+  .directions .parking .zoom {
+    float: left;
+    display: block;
+    width: 50%; }
+    .directions .parking .zoom .parking-image {
+      display: block;
+      width: 100%; }
+.directions .hotel {
+  margin: 0 0 3% 0; }
+  .directions .hotel .hotel-info {
+    float: left;
+    width: 45%;
+    margin: 0 2% 0 0; }
+  .directions .hotel .hotel-map {
+    float: left;
+    width: 50%;
+    height: 40vh; }
+    .directions .hotel .hotel-map iframe {
+      width: 100%;
+      height: inherit; }
 
-::-moz-placeholder {
-  color: #0e142e;
-  font-style: italic; }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .directions .map-info .directions-info, .directions .map-info #map {
+    float: none;
+    width: 100%; }
+  .directions .parking .parking-info, .directions .parking .zoom {
+    float: none;
+    width: 100%; }
+  .directions .parking .zoom .parking-image {
+    width: 100%; }
+  .directions .hotel .hotel-info, .directions .hotel .hotel-map {
+    float: none;
+    width: 100%; } }
+.registry {
+  padding-bottom: 5%; }
+  .registry a {
+    display: block;
+    float: left;
+    width: auto; }
+    .registry a > img {
+      display: block;
+      margin: 0; }
+    .registry a:nth-child(-n+2) {
+      margin: 5% 2% 0 15%; }
+    .registry a:nth-child(odd) {
+      margin: 10% 2% 0 2%; }
+    .registry a:last-child {
+      margin: 10.5% 2% 0 2%; }
 
-:-ms-input-placeholder {
-  color: #0e142e;
-  font-style: italic; }
-
-input:-moz-placeholder {
-  color: #0e142e;
-  font-style: italic; }
+@media screen and (min-width: 845px) and (max-width: 960px) {
+  .registry a:nth-child(-n+2) {
+    margin: 5% 2% 0 5%; } }
+@media screen and (min-width: 800px) and (max-width: 845px) {
+  .registry a:nth-child(-n+2) {
+    margin: 5% 1% 0 1%; } }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .registry a {
+    float: none; }
+    .registry a:nth-child(-n+2) {
+      margin: 5% 0 0 25%; }
+    .registry a:nth-child(odd) {
+      margin: 10% 0 0 16%; }
+    .registry a:last-child {
+      margin: 10.5% 0 0 8%; } }
