@@ -68,6 +68,17 @@
 			float:left;
 			width:45%;
 			margin:0 2% 0 0;
+			p{
+				margin:0 0 1em 0;
+			}
+			a{
+				text-decoration:none;
+				color:$pink;
+				@include prefixed-transition(color 0.5s ease-in-out);
+				&:hover{
+					color:$navy;	
+				}
+			}
 		}
 		.hotel-map{
 			float:left;

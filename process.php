@@ -19,7 +19,7 @@
   $headers = "From:" . $from;
   
   // Host Message Variables
-  $weddingEmail = "jruiz.xcs.vvr@gmail.com";
+  $weddingEmail = "erin.johanna.ruiz@gmail.com";
   $rsvpSubject = "Someone has RSVP'd to your wedding";
   $rsvpMessage = "Someone has RSVP'd to your wedding.\n\n Here is the information they provided.\n\n Name: $fname $lname\n Address: $address\n City: $city\n State: $state\n Zipcode: $zipcode\n Email: $email\n Telephone: $telephone\n Number of Guests: $guests\n Special Requests: $requests\n";
    

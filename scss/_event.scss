@@ -1,10 +1,19 @@
 .event{
-	p{
-		width:50%;
+	.ceremony-info, .reception-info{
+		width:47%;
+		margin:1em 0 0 0;
+	}
+	.ceremony-info{
+		float:left;
+		margin:1em 5% 0 0;
+	}
+	.reception-info{
+		float:right;
 	}
 	@media screen and (min-width:320px) and (max-width:480px){
-		p{
+		.ceremony-info, .reception-info{
 			width:100%;
+			float:none;
 		}
 	}
 }

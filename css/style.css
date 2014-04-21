@@ -262,9 +262,9 @@ input:-moz-placeholder {
 html {
   font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Arial, serif;
   color: #0e142e;
-  background: linear-gradient(135deg, #ff73c8 25%, transparent 25%) -50px 0, linear-gradient(225deg, #ff73c8 25%, transparent 25%) -50px 0, linear-gradient(315deg, #ff73c8 25%, transparent 25%), linear-gradient(45deg, #ff73c8 25%, transparent 25%);
+  background: linear-gradient(135deg, #ffd9f0 25%, transparent 25%) -50px 0, linear-gradient(225deg, #ffd9f0 25%, transparent 25%) -50px 0, linear-gradient(315deg, #ffd9f0 25%, transparent 25%), linear-gradient(45deg, #ffd9f0 25%, transparent 25%);
   background-size: 100px 100px;
-  background-color: #485797; }
+  background-color: #939ecc; }
 
 main {
   background: #ffffff;
@@ -287,13 +287,13 @@ main {
     padding: 7px 20px 7px 25px;
     margin: 0.5em 0 0.5em -0.70em;
     color: #0e142e;
-    background-color: #ff40b4;
-    -moz-text-shadow: 0px 1px 2px #0e142e;
-    -webkit-text-shadow: 0px 1px 2px #0e142e;
-    text-shadow: 0px 1px 2px #0e142e;
-    -moz-box-shadow: 0px 2px 4px #ff73c8;
-    -webkit-box-shadow: 0px 2px 4px #ff73c8;
-    box-shadow: 0px 2px 4px #ff73c8; }
+    background-color: white;
+    -moz-text-shadow: 0px 1px 2px #485797;
+    -webkit-text-shadow: 0px 1px 2px #485797;
+    text-shadow: 0px 1px 2px #485797;
+    -moz-box-shadow: 0px 2px 4px #0e142e;
+    -webkit-box-shadow: 0px 2px 4px #0e142e;
+    box-shadow: 0px 2px 4px #0e142e; }
     .bios h2:before, .bios h2:after, .event h2:before, .event h2:after, .rsvp h2:before, .rsvp h2:after, .directions h2:before, .directions h2:after, .registry h2:before, .registry h2:after, .other-info h2:before, .other-info h2:after {
       content: ' ';
       position: absolute;
@@ -304,7 +304,9 @@ main {
       top: 100%;
       border-width: 5px 5px;
       border-style: solid;
-      border-color: #a60065 #a60065 transparent transparent; }
+      border-color: #0e142e #0e142e transparent transparent; }
+  .bios p, .event p, .rsvp p, .directions p, .registry p, .other-info p {
+    line-height: 1.5em; }
 
 header {
   width: 100%;
@@ -406,6 +408,8 @@ header {
     float: left; }
   .bios .info.johanna {
     float: right; }
+  .bios .info p {
+    margin: 0 0 1em 0; }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .bios .info {
     width: 100%; }
@@ -414,11 +418,18 @@ header {
     .bios .info.erin {
       margin: 5% 0 10%; } }
 
-.event p {
-  width: 50%; }
+.event .ceremony-info, .event .reception-info {
+  width: 47%;
+  margin: 1em 0 0 0; }
+.event .ceremony-info {
+  float: left;
+  margin: 1em 5% 0 0; }
+.event .reception-info {
+  float: right; }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .event p {
-    width: 100%; } }
+  .event .ceremony-info, .event .reception-info {
+    width: 100%;
+    float: none; } }
 
 .rsvp p {
   width: 100%;
@@ -521,6 +532,16 @@ header {
     float: left;
     width: 45%;
     margin: 0 2% 0 0; }
+    .directions .hotel .hotel-info p {
+      margin: 0 0 1em 0; }
+    .directions .hotel .hotel-info a {
+      text-decoration: none;
+      color: #ff0099;
+      -moz-transition: color 0.5s ease-in-out;
+      -webkit-transition: color 0.5s ease-in-out;
+      transition: color 0.5s ease-in-out; }
+      .directions .hotel .hotel-info a:hover {
+        color: #0e142e; }
   .directions .hotel .hotel-map {
     float: left;
     width: 50%;
