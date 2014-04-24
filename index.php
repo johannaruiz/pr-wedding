@@ -65,13 +65,9 @@ if (isset($_POST[submit])){
     	<div class="erin info clearfix">
     	  <img src="img/erin.jpg" alt="">
     	 <h3>Erin</h3>
-    	 <p>Erin was born in South Korea and grew up in Rochester, Minnesota. 
-    	   She went to college at the University of North Dakota in Grand Forks and majored in Social Work. 
-    	   Erin is currently a county social worker and assesses the aging and disability populations. 
-    	   Erin feels fortunate she was able to translate her passion for helping people into a career.
+    	 <p>Erin was born in South Korea and grew up in Rochester, Minnesota. She went to college at the University of North Dakota in Grand Forks and majored in Social Work. Erin is currently a county social worker assessing the aging and disability populations. Erin feels fortunate she was able to translate her passion for helping people into a career.
     	 </p>
-    	 <p>In her free time she enjoys crafting, baking, snowboarding, jogging, and spending time with family and friends. 
-    	   Erin is a self-proclaimed foodie; she loves to try new restaurants and is always willing to give a suggestion on where to eat.
+    	 <p>In her free time she enjoys crafting, baking, snowboarding, jogging, and spending time with family and friends. Erin is a self-proclaimed foodie and ice cream fanatic; she loves to try new restaurants and is always willing to give a suggestion on where to eat.
     	 </p>
     	</div>
     	<div class="johanna info clearfix">
@@ -84,15 +80,18 @@ if (isset($_POST[submit])){
     <section id="wedding" class="event clearfix">
     	<h2>The Wedding</h2>
     	  <div class="ceremony-info">
-    	    <p>There&rsquo;s no church, no aisle and no chairs (at least for the ceremony).<br/><span class="bold">Saturday, the 28<sup>th</sup> of June 2014</span> at Como Park Pavillion, <br/>Erin Lynn Lee and Johanna Bo will be vowing a lifetime to each other. <br/>The ceremony will be held at <span class="bold">4:30 p.m. sharp</span>. <br/>Dinner will follow shortly after the ceremony with desert to follow.</p>
+    	    <p>There&rsquo;s no church, no aisle and no chairs (at least for the ceremony).<br/><span class="bold">Saturday, the 28<sup>th</sup> of June 2014</span> at Como Park Pavillion, <br/>Erin Lynn Lee and Johanna Bo will be vowing a lifetime to each other.</p>
+    	    <p>The ceremony will be held at <span class="bold">4:30 p.m. sharp</span>. Please allow for ample time to park and walk (see parking map below). The venue is a sheltered pavilion and the ceremony will be held rain or shine.</p>
+    	    <p>Please dress appropriate for the weather. We suggest business casual attire e.g. summer dresses, khakis, polos, short sleeve button ups etc&hellip;</p>
     	  </div>
     	  <div class="reception-info">
-    	    <p>The reception will start right after the ceremony has concluded. <br/>Dinner will be a buffet of Asian &amp; Mexican fusion foods. There will be two meat options of chicken and pork, as well as a vegetarian option. <br/> There will be a popcorn bar for snacks. <br/> Desert will be an ice cream bar from Gand Ole Creamery.</p>
+    	    <p>Dinner will follow shortly after the ceremony with desert to follow. Dinner will be a buffet of Asian &amp; Mexican fusion foods. The main course will include two meat options of chicken and pork, as well as a vegetarian option. Please note any special food accommodations when RSVP&rsquo;ing, we will do our best to accommodate the request.</p>
+    	    <p>There will be a popcorn bar for snacking.<br/>Dessert will be an ice cream bar from Gand Ole Creamery.</p>
     	  </div>
     </section><!--end info-->
     <section id="rsvp" class="rsvp clearfix">
       <h2>RSVP</h2>
-      <p>Please use the registration form to the right to RSVP for the event. Please make note of any food allergies or any special needs in the &ldquo;Special Requests&rdquo; field. All fields required unless denoted with *.<br/><br/><?php echo($msg); ?> </p>
+      <p>Please use the registration form to the right to RSVP for the event. Make note of any food allergies or any special needs in the &ldquo;Special Requests&rdquo; field. All fields required unless denoted with *.<br/><br/><?php echo($msg); ?> </p>
       <p></p>
     	<form action="<?= $_SERVER['PHP_SELF'] . "#rsvp" ?>" method="post" class="clearfix">
     	  <label for="fname"></label>
@@ -125,14 +124,14 @@ if (isset($_POST[submit])){
         <h3>Directions</h3>
         <div class="directions-info">
           <p>The wedding and reception is being held at the <span class="bold">Como Park Pavilion</span> located at <span class="bold">1199 Midway Pkwy, St Paul, MN 55103</span>.</p>
-          <p>For directions, you can click the red marker on the map to the right or just <a href="http://tiny.cc/epjrwd14" taget="_blank">Click here</a> and be brought to Google Maps.</p>
+          <p>For directions, you can click the red marker on the map to the right or <a href="http://tiny.cc/epjrwd14" taget="_blank">Click here</a> and be brought to Google Maps.</p>
         </div>
         <div id="map"></div>  
       </div>
       <div class="parking clearfix">
         <h3>Parking</h3>
         <div class="parking-info">
-          <p>Parking is abundant near the venue. There are many parking lots located near the pavilion as well as an abundance of street parking near the venue. Please view the parking map to see where parking is available. Please note that there are some restrictions to street parking in the neighborhod nearby.</p>
+          <p>Parking is abundant near the venue and is open to the public on a first come basis. There are many parking lots located near the pavilion as well as an abundance of street parking near the venue. Please view the parking map to see where parking is available. Please note that there are some restrictions to street parking in the neighborhod nearby. We do not recommend using the como shuttle lot because the Como Zoo closes at 6pm and you&rsquo;ll have to walk roughly a mile back to your car.</p>
         </div>
         <span id="parking-map" class="zoom"><img src="img/como-area-parking-and-amenities.jpg" alt="City of Saint Paul Parks and Recreation. Como Park Regional" class="parking-image" ></span>
       </div>
@@ -150,6 +149,7 @@ if (isset($_POST[submit])){
     </section><!--end directions-->
     <section id="registry" class="registry clearfix">
       <h2>We&rsquo;re Registered at</h2>
+        <p>Click the icons below to view our registry.</p>
         <a href="http://www.target.com/GiftRegistrySearchViewCmd?registryType=WD&jsRequest=true&catalogId=10051&status=completePage&cumulativeTime=-1&listId=2guCZAsOIeW-9f1yHdXnAQ&noOfPings=&registryFirstName=Erin&langId=-1&segmentGrpName=-1&storeId=10151&registryLastName=Putnam" target="_blank"><img src="img/target.png" alt="Target"></a>
         <a href="http://www.honeyfund.com/wedding/erinandjohanna" target="_blank"><img src="img/honeyfund.png" alt="Honey Fund"></a>
         <a href="http://www.amazon.com/registry/wedding/1DIPG45U3FS9S" target="_blank"><img src="img/amazon.png" alt="Amazon"></a>

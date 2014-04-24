@@ -421,6 +421,10 @@ header {
 .event .ceremony-info, .event .reception-info {
   width: 47%;
   margin: 1em 0 0 0; }
+  .event .ceremony-info p, .event .reception-info p {
+    margin: 0 0 1em 0; }
+    .event .ceremony-info p:last-child, .event .reception-info p:last-child {
+      margin: 0; }
 .event .ceremony-info {
   float: left;
   margin: 1em 5% 0 0; }
@@ -571,25 +575,25 @@ header {
     .registry a > img {
       display: block;
       margin: 0; }
-    .registry a:nth-child(-n+2) {
+    .registry a:first-of-type {
       margin: 5% 2% 0 15%; }
-    .registry a:nth-child(odd) {
+    .registry a:nth-child(even) {
       margin: 10% 2% 0 2%; }
     .registry a:last-child {
       margin: 10.5% 2% 0 2%; }
 
 @media screen and (min-width: 845px) and (max-width: 960px) {
-  .registry a:nth-child(-n+2) {
+  .registry a:first-of-type {
     margin: 5% 2% 0 5%; } }
 @media screen and (min-width: 800px) and (max-width: 845px) {
-  .registry a:nth-child(-n+2) {
+  .registry a:first-of-type {
     margin: 5% 1% 0 1%; } }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .registry a {
     float: none; }
-    .registry a:nth-child(-n+2) {
+    .registry a:first-of-type {
       margin: 5% 0 0 25%; }
-    .registry a:nth-child(odd) {
+    .registry a:nth-child(even) {
       margin: 10% 0 0 16%; }
     .registry a:last-child {
       margin: 10.5% 0 0 8%; } }
