@@ -8,7 +8,13 @@
 	form{
 		width:100%;
 		max-width:485px;
-		float:left;
+		&#accepted{
+			//display:none;
+			float:left;
+		}
+		&#declined{
+			display:none;
+		}
 		input{
 			padding:3px 5px;
 			-webkit-appearance:none;
@@ -34,7 +40,9 @@
 			&.fname, &.city, &.state, &.email, &.guests{
 				margin:0 2.05% 0 0;
 			}
-
+			&.placeholdersjs{
+				color:$navy; font-style:italic;
+			}
 		}
 		input[type="submit"]{
 			width:100%;
@@ -50,5 +58,7 @@
 				border:1px solid $navy;
 			}
 		}
+	}
+	input[type=checkbox]{
 	}	
 }

@@ -7,7 +7,7 @@ if (isset($_POST[submit])){
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html data-placeholder-focus="false" class="no-js"> <!--<![endif]-->
   <head>
     <title>Erin and Johanna&rsquo;s Wedding!</title>
     <meta charset="utf-8">
@@ -35,7 +35,7 @@ if (isset($_POST[submit])){
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="placeholder">
   <!-- Add your site or application content here -->
   <header role="banner" class="">
     <nav role="navigation">
@@ -52,12 +52,13 @@ if (isset($_POST[submit])){
   <main role="main" id="content" class="wedding">
     <section id="photos" class="carousel">
     	<ul class="rslides">
-    	  <li><img src="img/slide-6.jpg" alt=""></li>
-    	  <li><img src="img/slide-4.jpg" alt=""></li>
     	  <li><img src="img/slide-1.jpg" alt=""></li>
-    	  <li><img src="img/slide-3.jpg" alt=""></li>
     	  <li><img src="img/slide-2.jpg" alt=""></li>
+    	  <li><img src="img/slide-3.jpg" alt=""></li>
+    	  <li><img src="img/slide-4.jpg" alt=""></li>
     	  <li><img src="img/slide-5.jpg" alt=""></li>
+    	  <li><img src="img/slide-6.jpg" alt=""></li>
+    	  <li><img src="img/slide-7.jpg" alt=""></li>
     	</ul>
     </section><!--end carousel-->
     <section id="couple" class="bios clearfix">
@@ -85,15 +86,19 @@ if (isset($_POST[submit])){
     	    <p>Please dress appropriate for the weather. We suggest business casual attire e.g. summer dresses, khakis, polos, short sleeve button ups etc&hellip;</p>
     	  </div>
     	  <div class="reception-info">
-    	    <p>Dinner will follow shortly after the ceremony with desert to follow. Dinner will be a buffet of Asian &amp; Mexican fusion foods. The main course will include two meat options of chicken and pork, as well as a vegetarian option. Please note any special food accommodations when RSVP&rsquo;ing, we will do our best to accommodate the request.</p>
-    	    <p>There will be a popcorn bar for snacking.<br/>Dessert will be an ice cream bar from Gand Ole Creamery.</p>
+    	    <p>Dinner will follow shortly after the ceremony with dessert to follow. Dinner will be a buffet of Asian &amp; Mexican fusion foods. The main course will include two meat options of chicken and pork, as well as a vegetarian option. Please note any special food accommodations when RSVP&rsquo;ing, we will do our best to accommodate the request.</p>
+    	    <p>There will be a popcorn bar for snacking.<br/>Dessert will be an ice cream bar from Grand Ole Creamery.</p>
     	  </div>
     </section><!--end info-->
     <section id="rsvp" class="rsvp clearfix">
       <h2>RSVP</h2>
       <p>Please use the registration form to the right to RSVP for the event. Make note of any food allergies or any special needs in the &ldquo;Special Requests&rdquo; field. All fields required unless denoted with *.<br/><br/><?php echo($msg); ?> </p>
-      <p></p>
-    	<form action="<?= $_SERVER['PHP_SELF'] . "#rsvp" ?>" method="post" class="clearfix">
+      <!--<p>
+        Will you be attending
+        <label for="yes">Yes</label><input type="checkbox" name="yes" value="Yes" id="">
+        <label for="no">No</label><input type="checkbox" name="no" value="No" id="">
+      </p>-->
+    	<form action="<?= $_SERVER['PHP_SELF'] . "#rsvp" ?>" method="post" class="clearfix" id="accepted">
     	  <label for="fname"></label>
     	  <input type="text" name="fname" placeholder="First Name" value="<?php echo ($_POST['fname']); ?>" id="fname" class="double fname">
     	  <label for="lname"></label>
@@ -117,6 +122,12 @@ if (isset($_POST[submit])){
     	  <label for="submit"></label>
     	  <input type="submit" name="submit" value="Submit">
     	</form>
+    	<form action="" method="post" class="decline clearfix" id="declined">
+        <label for="fname"></label>
+    	  <input type="text" name="fname" placeholder="First Name" value="<?php echo ($_POST['fname']); ?>" id="fname" class="double fname">
+    	  <label for="submit"></label>
+    	  <input type="submit" name="submit" value="Submit">
+      </form>
     </section><!--end rsvp-->
     <section id="directions" class="directions clearfix">
       <h2>Directions, Parking and Hotel Information</h2>
@@ -168,6 +179,7 @@ if (isset($_POST[submit])){
   <script src="js/responsiveslides.js"></script>
   <script src="js/jquery.zoom.min.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/placeholders.jquery.js"></script>
    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
