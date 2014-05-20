@@ -122,11 +122,12 @@ if (isset($_POST[submit])){
     	  <label for="submit"></label>
     	  <input type="submit" name="submit" value="Submit">
     	</form>
+    	<p>We&rsquo;re sorry you&rsquo;re unable to attend. Just enter your name to let us know you&rsquo;re unable to make it.</p>
     	<form action="" method="post" class="decline clearfix" id="declined">
         <label for="fname"></label>
     	  <input type="text" name="fname" placeholder="First Name" value="<?php echo ($_POST['fname']); ?>" id="fname" class="double fname">
     	  <label for="submit"></label>
-    	  <input type="submit" name="submit" value="Submit">
+    	  <input id="rsvp-submit" type="submit" name="submit" value="Submit">
       </form>
     </section><!--end rsvp-->
     <section id="directions" class="directions clearfix">
